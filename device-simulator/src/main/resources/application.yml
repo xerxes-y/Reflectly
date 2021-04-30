@@ -1,0 +1,24 @@
+server:
+  port: 9201
+  http2:
+    enabled: true
+spring:
+  application:
+    name: "device-simulator"
+  data:
+    elasticsearch:
+      client:
+        reactive:
+          endpoints: elasticsearch:9200
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zkNodes: localhost:2181
+      bindings:
+        vehicle-stream:
+          destination: vehicle-stream
+          contentType: application/json
+          producer:
+            headerMode: none
