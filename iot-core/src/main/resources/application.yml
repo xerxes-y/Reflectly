@@ -1,0 +1,29 @@
+server:
+  port: 9202
+  http2:
+    enabled: true
+spring:
+  application:
+    name: "IOT-CORE"
+  data:
+    elasticsearch:
+      client:
+        reactive:
+          endpoints: elasticsearch:9200
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zkNodes: localhost:2181
+      bindings:
+        vehicle-stream:
+          destination: vehicle-stream
+          contentType: application/json
+          producer:
+            headerMode: none
+spark:
+  master:
+    uri: local
+  app:
+    name: iotcore
