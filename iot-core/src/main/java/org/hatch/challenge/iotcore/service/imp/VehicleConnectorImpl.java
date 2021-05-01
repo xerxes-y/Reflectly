@@ -31,6 +31,9 @@ public class VehicleConnectorImpl implements VehicleConnector {
         status.setVin(vehicleStatus.getVin());
         status.setTime(new Date());
         statusRepository.save(status).subscribe(resultStatus ->
-                sparkSession.createDataFrame(statusRepository.findAll()
-                        .collectList().block(), Status.class).collect());}
+                statusRepository.findAll()
+                        .collectList().subscribe(statuses ->
+                        sparkSession.createDataFrame(statuses, Status.class)
+                                .collect()));
+    }
 }
