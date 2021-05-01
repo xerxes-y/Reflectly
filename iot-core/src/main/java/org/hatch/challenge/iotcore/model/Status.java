@@ -2,9 +2,12 @@ package org.hatch.challenge.iotcore.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document
+
+import java.util.Date;
+
+@Document(indexName = "status",type = "status")
 @Data
 public class Status {
     @Id
@@ -13,7 +16,7 @@ public class Status {
     private String customerId;
     private int driverId;
     private int ping;
-    private Data time;
+    private Date time;
     private StatusDetailReceiver statusDetail;
 
 }

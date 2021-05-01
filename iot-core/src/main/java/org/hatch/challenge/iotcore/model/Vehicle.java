@@ -2,9 +2,10 @@ package org.hatch.challenge.iotcore.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document
+
+@Document(indexName = "vehicle",type = "vehicle")
 @Data
 public class Vehicle {
     @Id
