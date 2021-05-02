@@ -22,5 +22,7 @@ public class PropertiesKey {
     public static final String Customer3_Vin2="YS2R4X20005387055";
     public static final String Customer3_RegNr1="PQR678";
     public static final String Customer3_RegNr2="STU901";
-
+    public static final String CarType_COUPE="COUPE";
+    public static final String CarType_SPORTS_CAR="SPORTS_CAR";
+    public static final String CarType_CONVERTIBLE="CONVERTIBLE";
 }

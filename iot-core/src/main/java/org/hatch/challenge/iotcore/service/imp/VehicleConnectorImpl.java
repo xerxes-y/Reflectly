@@ -17,8 +17,8 @@ import java.util.Date;
 @RequiredArgsConstructor
 @Slf4j
 public class VehicleConnectorImpl implements VehicleConnector {
-    @Autowired
-    private SparkSession sparkSession;
+
+    private final SparkSession sparkSession;
     private final StatusRepository statusRepository;
 
     @Override
@@ -33,6 +33,7 @@ public class VehicleConnectorImpl implements VehicleConnector {
         statusRepository.save(status).subscribe(resultStatus ->
                 statusRepository.findAll()
                         .collectList().subscribe(statuses ->
+
                         sparkSession.createDataFrame(statuses, Status.class)
                                 .collect()));
     }

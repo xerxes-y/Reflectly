@@ -1,0 +1,12 @@
+server:
+  port: 9203
+  http2:
+    enabled: true
+spring:
+  application:
+    name: "IOT-PROCESSOR"
+spark:
+  master:
+    uri: local
+  app:
+    name: iotcore
