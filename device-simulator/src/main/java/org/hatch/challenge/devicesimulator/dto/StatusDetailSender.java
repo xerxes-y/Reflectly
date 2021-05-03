@@ -11,5 +11,6 @@ public class StatusDetailSender implements Serializable {
     private boolean runEngine;
     private int gas;
     private int speedKilometers;
+    private String carType;
     private int wheelsWind;
 }

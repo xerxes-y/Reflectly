@@ -25,9 +25,9 @@ public class ApplicationStartup
                     .fullName(PropertiesKey.Customer1).address(PropertiesKey.Customer1_Address).build()).subscribe(customer -> {
                 vehiclesRepository.saveAll(
                         List.of(
-                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer1_Vin).regNr(PropertiesKey.Customer1_RegNr1).build(),
-                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer1_Vin2).regNr(PropertiesKey.Customer1_RegNr2).build(),
-                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer1_Vin3).regNr(PropertiesKey.Customer1_RegNr3).build()
+                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer1_Vin).regNr(PropertiesKey.Customer1_RegNr1).carType(PropertiesKey.CarType_CONVERTIBLE).build(),
+                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer1_Vin2).regNr(PropertiesKey.Customer1_RegNr2).carType(PropertiesKey.CarType_SPORTS_CAR).build(),
+                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer1_Vin3).regNr(PropertiesKey.Customer1_RegNr3).carType(PropertiesKey.CarType_COUPE).build()
                         )).subscribe();
             });
 
@@ -36,8 +36,8 @@ public class ApplicationStartup
             customersRepository.save(Customer.builder().fullName(PropertiesKey.Customer2).address(PropertiesKey.Customer2_Address).build()).subscribe(customer -> {
                 vehiclesRepository.saveAll(
                         List.of(
-                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer2_Vin1).regNr(PropertiesKey.Customer2_RegNr1).build(),
-                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer2_Vin2).regNr(PropertiesKey.Customer2_RegNr2).build()
+                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer2_Vin1).regNr(PropertiesKey.Customer2_RegNr1).carType(PropertiesKey.CarType_CONVERTIBLE).build(),
+                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer2_Vin2).regNr(PropertiesKey.Customer2_RegNr2).carType(PropertiesKey.CarType_COUPE).build()
                         )).subscribe();
             });
         }
@@ -46,8 +46,8 @@ public class ApplicationStartup
                     .fullName(PropertiesKey.Customer3).address(PropertiesKey.Customer3_Address).build()).subscribe(customer -> {
                 vehiclesRepository.saveAll(
                         List.of(
-                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer3_Vin1).regNr(PropertiesKey.Customer3_RegNr1).build(),
-                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer3_Vin2).regNr(PropertiesKey.Customer3_RegNr2).build()
+                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer3_Vin1).regNr(PropertiesKey.Customer3_RegNr1).carType(PropertiesKey.CarType_CONVERTIBLE).build(),
+                                Vehicle.builder().customerId(customer.getId()).vin(PropertiesKey.Customer3_Vin2).regNr(PropertiesKey.Customer3_RegNr2).carType(PropertiesKey.CarType_SPORTS_CAR).build()
                         )).subscribe();
             });
         }

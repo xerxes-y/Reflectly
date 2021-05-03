@@ -17,6 +17,7 @@ VehicleStatusReceiverDto implements Serializable {
     private String connect;
     private String openDoor;
     private int speedKilometers;
+    private String carType;
     private StatusDetailReceiver statusDetailDto;
 
 }

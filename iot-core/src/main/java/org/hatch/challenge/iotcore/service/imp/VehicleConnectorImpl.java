@@ -29,6 +29,7 @@ public class VehicleConnectorImpl implements VehicleConnector {
         status.setDriverId(vehicleStatus.getDriverId());
         status.setPing(vehicleStatus.getPing());
         status.setVin(vehicleStatus.getVin());
+        status.setCarType(vehicleStatus.getCarType());
         status.setTime(new Date());
         statusRepository.save(status).subscribe(resultStatus ->
                 statusRepository.findAll()

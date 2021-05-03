@@ -40,6 +40,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(true);
                     statusDetail.setSpeedKilometers(ThreadLocalRandom.current().nextInt(11, 120 + 1));
                     statusDetail.setOpenDoor(false);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             1, true, ThreadLocalRandom.current().nextInt(2, 10+ 1), statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
@@ -54,6 +55,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(false);
                     statusDetail.setSpeedKilometers(0);
                     statusDetail.setOpenDoor(false);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             1, true, 0, statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
@@ -79,6 +81,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(true);
                     statusDetail.setSpeedKilometers(ThreadLocalRandom.current().nextInt(11, 120 + 1));
                     statusDetail.setOpenDoor(false);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             1, true, ThreadLocalRandom.current().nextInt(2, 10+ 1), statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
@@ -94,6 +97,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(false);
                     statusDetail.setSpeedKilometers(0);
                     statusDetail.setOpenDoor(false);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             1, true, 0, statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
@@ -119,6 +123,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(true);
                     statusDetail.setSpeedKilometers(ThreadLocalRandom.current().nextInt(11, 120 + 1));
                     statusDetail.setOpenDoor(true);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             3, true, ThreadLocalRandom.current().nextInt(2, 10+ 1), statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
@@ -134,6 +139,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(false);
                     statusDetail.setSpeedKilometers(0);
                     statusDetail.setOpenDoor(false);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             3, true, 0, statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
@@ -159,6 +165,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(true);
                     statusDetail.setSpeedKilometers(ThreadLocalRandom.current().nextInt(11, 120 + 1));
                     statusDetail.setOpenDoor(true);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             2, true, ThreadLocalRandom.current().nextInt(2, 10+ 1), statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
@@ -174,6 +181,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(false);
                     statusDetail.setSpeedKilometers(0);
                     statusDetail.setOpenDoor(false);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             2, true, 0, statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
@@ -199,6 +207,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(true);
                     statusDetail.setSpeedKilometers(ThreadLocalRandom.current().nextInt(11, 120 + 1));
                     statusDetail.setOpenDoor(true);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             5, true, ThreadLocalRandom.current().nextInt(2, 10+ 1), statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
@@ -214,6 +223,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(false);
                     statusDetail.setSpeedKilometers(0);
                     statusDetail.setOpenDoor(false);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             5, true, 0, statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
@@ -239,6 +249,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(true);
                     statusDetail.setSpeedKilometers(ThreadLocalRandom.current().nextInt(11, 120 + 1));
                     statusDetail.setOpenDoor(true);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             6, true, ThreadLocalRandom.current().nextInt(2, 10+ 1), statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
@@ -254,6 +265,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(false);
                     statusDetail.setSpeedKilometers(0);
                     statusDetail.setOpenDoor(false);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             6, true, 0, statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
@@ -279,6 +291,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(true);
                     statusDetail.setSpeedKilometers(ThreadLocalRandom.current().nextInt(11, 120 + 1));
                     statusDetail.setOpenDoor(true);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             7, true, ThreadLocalRandom.current().nextInt(2, 10+ 1), statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
@@ -294,6 +307,7 @@ public class SimulateDateScheduler {
                     statusDetail.setRunEngine(false);
                     statusDetail.setSpeedKilometers(0);
                     statusDetail.setOpenDoor(false);
+                    statusDetail.setCarType(vehicle.getCarType());
                     VehicleStatusSenderDto vehicleStatus = new VehicleStatusSenderDto(vehicle.getVin(), customer.getId(),
                             7, true, 0, statusDetail);
                     streamMessageSender.sentMessage(vehicleStatus);
