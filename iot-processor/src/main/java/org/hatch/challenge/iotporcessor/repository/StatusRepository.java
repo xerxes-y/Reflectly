@@ -1,8 +1,8 @@
 package org.hatch.challenge.iotporcessor.repository;
 
 
-import org.hatch.challenge.iotcore.model.Status;
-import org.hatch.challenge.iotcore.model.StatusDetailReceiver;
+import org.hatch.challenge.iotporcessor.model.Status;
+import org.hatch.challenge.iotporcessor.model.StatusDetailReceiver;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Flux;
