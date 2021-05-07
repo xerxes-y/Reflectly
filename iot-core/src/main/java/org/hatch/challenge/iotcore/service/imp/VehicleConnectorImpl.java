@@ -17,8 +17,8 @@ import java.util.Date;
 @RequiredArgsConstructor
 @Slf4j
 public class VehicleConnectorImpl implements VehicleConnector {
-
-    private final SparkSession sparkSession;
+    @Autowired
+    private SparkSession sparkSession;
     private final StatusRepository statusRepository;
 
     @Override
@@ -29,12 +29,10 @@ public class VehicleConnectorImpl implements VehicleConnector {
         status.setDriverId(vehicleStatus.getDriverId());
         status.setPing(vehicleStatus.getPing());
         status.setVin(vehicleStatus.getVin());
-        status.setCarType(vehicleStatus.getCarType());
         status.setTime(new Date());
         statusRepository.save(status).subscribe(resultStatus ->
                 statusRepository.findAll()
                         .collectList().subscribe(statuses ->
-
                         sparkSession.createDataFrame(statuses, Status.class)
                                 .collect()));
     }
