@@ -10,7 +10,6 @@ import reactor.core.publisher.Mono;
 @Repository
 public interface VehiclesRepository extends ReactiveCrudRepository<Vehicle, String> {
     Mono<Vehicle> findByVin(String vin );
-    Flux<Vehicle> findAllBy
     Flux<Vehicle> findByCustomerId(String customerId);
     
     
